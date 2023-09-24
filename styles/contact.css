@@ -1,0 +1,366 @@
+*,
+::before,
+::after 
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body 
+{
+    font-family: Arial;
+    width: 100%;
+    height: 100vh;
+}
+
+.grid-header 
+{
+    display: grid;
+    width: 100%;
+    height: 15vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.logoContainer 
+{
+    display: flex;
+}
+
+.hamburger 
+{
+    display: none;
+}
+
+.bar 
+{
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+}
+
+.menu 
+{
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+}
+
+.menu ul 
+{
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.menu li 
+{
+    margin: 15px;
+}
+
+.menu a 
+{
+    width: 80%;
+    text-decoration: none;
+    color: #333;
+    transition: 0.4s;
+}
+
+.menu a:hover 
+{
+    color: #FFB703;
+}
+
+#closeButton
+{
+    display: none;
+}
+
+.grid-contact
+{
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.containerContact
+{
+    margin-left: 10%;
+}
+
+#descriptionDiv
+{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#titleDiv
+{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#textContact
+{
+    width: 65%;
+    text-align: justify;
+    margin-top: 4%;
+}
+
+.ContactDiv
+{
+    display: grid;
+    width: 70%;
+    height: 10vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr, 2fr);
+    margin-top: 5%;
+}
+
+.ContainerImage
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#key, #phone, #mail
+{
+    display: flex;
+    width: 50%;
+}
+
+.containerAdresse
+{
+    grid-column: span 2;
+    width: 100%;
+}
+
+#titleContact
+{
+    color: red;
+}
+
+#infoContact
+{
+    font-size: small;
+}
+
+.Containermap
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map
+{
+    width: 70%;
+}
+
+footer
+{
+    display: grid;
+    width: 100%;
+    height: 40vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: black;
+    margin-top: 5%;
+}
+
+.ContainerAdresse, .ContainerHoraires
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    margin: 10px;
+}
+
+hr{
+    width: 200px;
+}
+
+#Adresse, #Horaires
+{
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.containerInfo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info
+{
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+@media (max-width: 1151px) 
+{
+    li, a 
+    {
+        font-size: 10px;
+    }
+    .logoContainer 
+    {
+        width: 150px; 
+    }
+}
+
+@media (max-width: 970px)
+{
+    #textContact
+    {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 785px) 
+{
+    .hamburger 
+    {
+        display: flex;
+        position: absolute;
+        right: 0;
+        margin: 30px;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background-color: #ff8d85;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu 
+    {
+        display: none;
+    }
+
+    #closeButton
+    {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: rgb(0, 0, 0);
+        background: none;
+        border: none;
+        position: absolute;
+        margin: 20px;
+        font-size: x-large;
+    }
+    
+    .menu.active 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        background-color: #ffffff;
+        width: 50%;
+        height: 40%;
+        text-align: center;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu.active ul 
+    {
+        flex-direction: column;
+    }
+
+    .menu.active li 
+    {
+        margin: 20px;
+        border-bottom-color: #333;
+        border-bottom-width: 2px;
+    }
+    .menu.active a 
+    {
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+    }
+    .grid-contact
+    {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 110vh;
+    }
+    #descriptionDiv, #titleDiv, #textContact
+    {
+        text-align: center;
+        width: 90%;
+    }
+    .ContactDiv
+    {
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+    .Containermap
+    {
+        background-color: #e8e8e8;
+    }
+    #map
+    {
+        width: 40%;
+    }
+}
+
+@media (max-width: 559px)
+{
+    #info
+    {
+        font-size: x-small;
+    }
+    hr
+    {
+        width: 100px;
+    }
+    #Horaires, #Adresse
+    {
+        font-size: small;
+    }
+}
+
+@media (max-width: 440px)
+{
+    .menu.active
+    {
+        width: 70%;
+    }
+    .menu.active a 
+    {
+        font-size: 10px;
+    }
+    #titleDiv
+    {
+        font-size: xx-large;
+    }
+    #infoContact
+    {
+        font-size: xx-small;
+    }
+    #textContact
+    {
+        font-size: 8px;
+    }
+}

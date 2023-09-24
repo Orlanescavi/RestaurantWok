@@ -1,0 +1,327 @@
+*,
+::before,
+::after 
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body 
+{
+    font-family: Arial;
+    width: 100%;
+    height: 100vh;
+}
+
+.grid-header 
+{
+    display: grid;
+    width: 100%;
+    height: 15vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.logoContainer 
+{
+    display: flex;
+}
+
+.hamburger 
+{
+    display: none;
+}
+
+.bar 
+{
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+}
+
+.menu 
+{
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+}
+
+.menu ul 
+{
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.menu li 
+{
+    margin: 15px;
+}
+
+.menu a 
+{
+    width: 80%;
+    text-decoration: none;
+    color: #333;
+    transition: 0.4s;
+}
+
+.menu a:hover 
+{
+    color: #FFB703;
+}
+
+#closeButton
+{
+    display: none;
+}
+
+.grid-title
+{
+    display: grid;
+    width: 100%;
+    height: 10vh;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.containerTitle
+{
+    text-align: center;
+}
+
+.grid-about
+{
+    display: grid;
+    width: 100%;
+    height: 80vh;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.containerPhoto, .containerText
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about
+{
+    width: 70%;
+}
+
+#Text
+{
+    width: 80%;
+    font-size: 15px;
+    text-align: justify;
+}
+
+footer
+{
+    display: grid;
+    width: 100%;
+    height: 40vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: black;
+}
+
+.containerAdresse, .containerHoraires
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    margin: 10px;
+}
+
+hr{
+    width: 200px;
+}
+
+#Adresse, #Horaires
+{
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.containerInfo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info
+{
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+
+@media (max-width: 1151px) 
+{
+    li, a 
+    {
+        font-size: 10px;
+    }
+    .logoContainer 
+    {
+        width: 150px; 
+    }
+}
+
+@media (max-width: 990px)
+{
+    .grid-about
+    {
+        height: 110vh;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .containerPhoto
+    {
+        background-color: #FFB703;
+    }
+    #about
+    {
+        width: 50%;
+    }
+    #Text
+    {
+        font-size: 10px;
+        width: 50%;
+    }
+    .containerText
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .centerAbout
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+}
+
+@media (max-width: 559px)
+{
+    #info
+    {
+        font-size: x-small;
+    }
+    hr
+    {
+        width: 100px;
+    }
+    #Horaires, #Adresse
+    {
+        font-size: small;
+    }
+}
+
+@media (max-width: 785px) 
+{
+    .hamburger 
+    {
+        display: flex;
+        position: absolute;
+        right: 0;
+        margin: 30px;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background-color: #ff8d85;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu 
+    {
+        display: none;
+    }
+
+    #closeButton
+    {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: rgb(0, 0, 0);
+        background: none;
+        border: none;
+        position: absolute;
+        margin: 20px;
+        font-size: x-large;
+    }
+    
+    .menu.active 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        background-color: #ffffff;
+        width: 50%;
+        height: 40%;
+        text-align: center;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu.active ul 
+    {
+        flex-direction: column;
+    }
+
+    .menu.active li 
+    {
+        margin: 20px;
+        border-bottom-color: #333;
+        border-bottom-width: 2px;
+    }
+    .menu.active a 
+    {
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media (max-width: 440px)
+{
+    .menu.active
+    {
+        width: 70%;
+    }
+    .menu.active a 
+    {
+        font-size: 10px;
+    }
+    .grid-about
+    {
+        height: 130vh;
+    }
+    #Text
+    {
+        width: 70%;
+    }
+}
+
+@media (max-width: 350px)
+{
+    h1
+    {
+        font-size: large;
+    }
+}
